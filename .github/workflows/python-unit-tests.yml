@@ -19,13 +19,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      
-      - name: Create virtual environment
-        run: python3 -m venv venv
-        run: .\venv\Scripts\activate
 
       - name: Install requirements.txt
         run: pip3 install -r requirements.txt
       - name: Run pytests
-        run: pytest
+        run: pytest testFile.py
         
