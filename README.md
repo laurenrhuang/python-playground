@@ -8,3 +8,4 @@ pip freeze > requirements.txt
 # now all we need is:
 pip3 install -r .\requirements.txt
 ```
+- create a pull request to test PR-commenter
