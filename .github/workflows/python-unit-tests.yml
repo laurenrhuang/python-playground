@@ -1,7 +1,7 @@
 # This workflow will set up Python 3.9, create a Python virtual environment
 # install requirements.txt, and run some unit tests
 
-name: unit tests
+name: Unit Tests
 
 on:
   push:
@@ -22,6 +22,6 @@ jobs:
 
       - name: Install requirements.txt
         run: pip3 install -r requirements.txt
-      - name: Run pytests
+      - name: Run Pytests
         run: pytest testFile.py
         
