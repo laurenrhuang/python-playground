@@ -1,9 +1,13 @@
-FROM python:slim-buster
+FROM python:buster
+
+WORKDIR /python-playground
 
 RUN python3 -m venv venv
+RUN . venv/bin/activate
 
-COPY requirements.txt .
-RUN . /venv/Scripts/activate && pip install -r requirements.txt
+COPY requirements.txt requirements.txt
 
-COPY myapp.py .
-CMD . /venv/Scripts/activate && exec python myapp.py
+RUN pip3 install -r requirements.txt
+
+COPY main.py main.py
+ENTRYPOINT [ "python", "main.py" ]
